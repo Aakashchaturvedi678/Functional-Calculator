@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <header class="screen">
+        <div class="result">
+            <input type="text" placeholder="result is here" id="display" readonly
+            >
+        </div>
+        </header>
+        <main class="content">
+            <div class="cear-row">
+                    <button class="number" onClick="currentdisplayvalue = currentdisplayvalue +'00';document.querySelector('#display').value = currentdisplayvalue; ">00</button>
+
+                    <button class="operator backspace" onclick=" currentdisplayvalue = currentdisplayvalue.slice(0, -1); document.querySelector('#display').value = currentdisplayvalue; ">⌫</button>
+
+                    
+                    <button class="operator clear" onclick="currentdisplayvalue = '';document.querySelector('#display').value = currentdisplayvalue; ">C</button>
+                    <button class="operator" onclick="currentdisplayvalue = currentdisplayvalue +'+';document.querySelector('#display').value = currentdisplayvalue; ">+</button>
+            </div>
+            <div class="first-row">
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'1';document.querySelector('#display').value = currentdisplayvalue; ">1</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'2';document.querySelector('#display').value = currentdisplayvalue; ">2</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'3';document.querySelector('#display').value = currentdisplayvalue; ">3</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'4';document.querySelector('#display').value = currentdisplayvalue; ">4</button>
+                <button class="operator" onclick="currentdisplayvalue = currentdisplayvalue +'/';document.querySelector('#display').value = currentdisplayvalue; ">/</button>
+            </div>
+                <div class="second-row">
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'5';document.querySelector('#display').value = currentdisplayvalue; ">5</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'6';document.querySelector('#display').value = currentdisplayvalue; ">6</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'7';document.querySelector('#display').value = currentdisplayvalue; ">7</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'9';document.querySelector('#display').value = currentdisplayvalue; ">8</button>
+                <button class="operator" onclick="currentdisplayvalue = currentdisplayvalue +'-';document.querySelector('#display').value = currentdisplayvalue; ">-</button>
+            </div>
+            <div class="third-row">
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'9';document.querySelector('#display').value = currentdisplayvalue; ">9</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'0';document.querySelector('#display').value = currentdisplayvalue; ">0</button>
+                <button class="number" onclick="currentdisplayvalue = currentdisplayvalue +'.';document.querySelector('#display').value = currentdisplayvalue; ">.</button>
+
+
+                <button class="operator" onclick="
+                let result = eval(currentdisplayvalue)
+                currentdisplayvalue = result;
+                document.querySelector('#display').value = currentdisplayvalue; ">=</button>
+
+
+
+
+                <button class="operator" onclick="currentdisplayvalue = currentdisplayvalue +'*';document.querySelector('#display').value = currentdisplayvalue; ">*</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
